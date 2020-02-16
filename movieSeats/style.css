@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Tomorrow&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.movie-container {
+  margin: 20px 0px;
+}
+
+.movie-container select {
+  background-color: rgb(146, 140, 179);
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 4px 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 250px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: rgb(167, 52, 202);
+}
+
+.seat.booked {
+  background-color: rgb(221, 69, 31);
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 20px;
+}
+.seat:nth-last-of-type(2) {
+  margin-left: 20px;
+}
+
+.seat:not(.booked):hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+.Legend .seat:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.Legend {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.Legend li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+}
+
+.Legend li small {
+  margin: 0px 4px;
+}
+
+.screen {
+  background-color: #fff;
+  height: 25px;
+  width: 100%;
+  margin: 15px 5px;
+  margin-bottom: 30px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.7);
+}
+
+.row {
+  display: flex;
+}
+
+p.text span {
+  color: rgb(52, 185, 202);
+}
